@@ -45,9 +45,10 @@ public class SeekBarPreference extends Preference implements SeekBar.OnSeekBarCh
         textTitle.setText(getTitle());
         SeekBar seekBar = view.findViewById(R.id.seekBar);
         seekBar.setOnSeekBarChangeListener(this);
+        seekBar.setMax(getOrder());
 
         SharedPreferences preferences = getSharedPreferences();
-        int value = preferences.getInt(getKey(), 0);
+        int value = preferences.getInt(getKey(), 2);
         textValue.setText(String.format(Locale.getDefault(), "%d", value));
         seekBar.setProgress(value);
         return view;
