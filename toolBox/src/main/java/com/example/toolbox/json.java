@@ -51,4 +51,31 @@ public class json {
         }
         return sb.toString();
     }
+    /**
+     * La fonction à mettre dans l'activité qui demande la request
+     */
+
+    /*
+        @SuppressLint("StaticFieldLeak")
+    private class getDataFromUrl extends AsyncTask<Void, Void, String> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            Toast.makeText(getApplicationContext(),"Json Data is downloading",Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        protected String doInBackground(Void... arg0) {
+            getJsonFromUrl sh = new getJsonFromUrl();
+            return sh.makeServiceCall("http://time.jsontest.com/");
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+            System.out.print(result);
+            Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+        }
+    }
+     */
 }
