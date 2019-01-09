@@ -45,13 +45,15 @@ public class SeekBarPreference extends Preference implements SeekBar.OnSeekBarCh
         textTitle.setText(getTitle());
         SeekBar seekBar = view.findViewById(R.id.seekBar);
         seekBar.setOnSeekBarChangeListener(this);
-        seekBar.setMax(getOrder());
 
         SharedPreferences preferences = getSharedPreferences();
         int value = preferences.getInt(getKey(), 2);
-        textValue.setText(String.format(Locale.getDefault(), "%d", value));
+        textValue.setText(String.format(Locale.getDefault(), "%d %s", value, "km"));
         seekBar.setProgress(value);
         return view;
+
+        //     seekbar.setMax((Max - Min) / Increment)
+        //     seekbar.setProgress((actualValue - Min) / Increment)
     }
 
     @Override
@@ -69,6 +71,14 @@ public class SeekBarPreference extends Preference implements SeekBar.OnSeekBarCh
 
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
+
+    }
+
+    public void MAXvalue(){
+
+    }
+
+    public void MINvalue(){
 
     }
 }
