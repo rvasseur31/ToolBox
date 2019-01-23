@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SeekBarPreference">
+        <attr name="rvs_minValue" format="reference|float"/>
+        <attr name="rvs_maxValue" format="reference|float"/>
+        <attr name="rvs_interval_float" format="reference|float"/>
+        <attr name="rvs_measurementUnit" format="reference|string"/>
+
+        <!--next ones should be used only with view!-->
+        <attr name="rvs_view_title" format="reference|string"/>
+        <attr name="rvs_view_summary" format="reference|string"/>
+        <attr name="rvs_view_defaultValue_float" format="reference|float"/>
+    </declare-styleable>
+</resources>
